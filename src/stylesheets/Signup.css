@@ -1,24 +1,20 @@
-.Login .Inputs{
+.Signup .Inputs{
   padding: 10px;
   border: none;
 }
 
-.Login{
+.Signup{
   width:100%;
   font-size:1.8em;
   font-family: 'Shrikhand', cursive;
   height:95vh;
-  color:white;
+  color:black;
   display:flex;
   justify-content: center;
   align-items: center
 }
 
-.Login .Link {
-  color:white
-}
-
-.Login .FullScreen {
+.Signup .FullScreen {
   position:absolute;
   left:0;
   top:5vh;
@@ -28,16 +24,16 @@
   border:none
 }
 
-.Login .LoginContent {
+.Signup .SignupContent {
   display:flex;
   justify-content: center;
   align-items: center;
   width:20%;
-  background-color:rgba(0, 0, 0, 0.7) ;
+  background-color:rgba(255, 255, 255, 0.7);
   padding:2%
 }
 
-.Login .LoginContent  div {
+.Signup .SignupContent  div {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -45,6 +41,6 @@
   margin-top:2%;
 }
 
-.Login .LoginContent form {
+.Signup .SignupContent form {
   margin:0
 }

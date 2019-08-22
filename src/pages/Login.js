@@ -48,25 +48,27 @@ class Login extends Component {
     return (
       <MainLayout>
         <div className="Login">
-          <form onSubmit={this.handleFormSubmit}>{/* we don't want the default form submitting behaviour, so we're adding own submit handler   */}
-            <div>
-              <label>Username</label>
-              <input className="Inputs" type="text" name="username" placeholder="username" value={this.state.user.username} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
-            </div>
-
-            <div>
-              <label>Password</label>
-              <input className="Inputs" type="password" name="password" placeholder="password" value={this.state.user.password} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
-            </div>
-
-            <div>
-              <input type="submit" value="Login" />
-            </div>
-
-            <p className="account-message">
-              Don't have an account? <Link to="/signup">Sign up</Link>
-            </p>
-          </form>
+          <div className="LoginContent">
+            <form onSubmit={this.handleFormSubmit}>{/* we don't want the default form submitting behaviour, so we're adding own submit handler   */}
+              <div>
+                <label>Username</label>
+                <input className="Inputs" type="text" name="username" placeholder="username" value={this.state.user.username} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
+              </div>
+              <div>
+                <label>Password</label>
+                <input className="Inputs" type="password" name="password" placeholder="password" value={this.state.user.password} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
+              </div>
+              <div>
+                <input type="submit" value="Login" />
+              </div>
+              <p className="account-message">
+                Don't have an account? <Link className="Link" to="/signup">Sign up</Link>
+              </p>
+            </form>
+          </div>
+          <div className="LoginIframe">
+            <iframe className= "Fullscreen" src="https://poly.google.com/view/cV54p02NHQt/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
+          </div>
         </div>
       </MainLayout>
     )

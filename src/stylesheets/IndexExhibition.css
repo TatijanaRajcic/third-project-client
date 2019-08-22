@@ -5,7 +5,6 @@
 }
 
 .IndexPage .allExhibitions{
-  font-size:1em;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +13,20 @@
 }
 
 .IndexPage .allExhibitions .exhibitionDetails{
-  width:50%;
+  width:40%;
+  padding: 2% 5%;
 }
 
+.IndexPage .allExhibitions .exhibitionDetails .ExhibitionItem{
+  background-color:#003554;
+  height:50vh;
+}
+
+.ExhibitionItem h1  {
+  font-size: 1.4em;
+}
+
+.ExhibitionItem h2 {
+  font-size:1em;
+  font-weight: lighter
+}

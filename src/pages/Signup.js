@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Auth from "../utils/Auth";
 import MainLayout from "../layout/MainLayout";
+import "../stylesheets/Signup.css"
 const auth = new Auth();
 
 class Signup extends Component {
@@ -48,26 +49,31 @@ class Signup extends Component {
   render(){
     return (
       <MainLayout>
-        <div className="NewUser">
-          <form onSubmit={this.handleFormSubmit}>{/* we don't want the default form submitting behaviour, so we're adding own submit handler   */}
-            <div>
-              <label>Username</label>
-              <input type="text" name="username" placeholder="username" value={this.state.user.username} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
-            </div>
+        <div className="Signup">
+          <div className="SignupContent">
+            <form onSubmit={this.handleFormSubmit}>{/* we don't want the default form submitting behaviour, so we're adding own submit handler   */}
+              <div>
+                <label>Username</label>
+                <input className="Inputs" type="text" name="username" placeholder="username" value={this.state.user.username} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
+              </div>
 
-            <div>
-              <label>Password</label>
-              <input type="password" name="password" placeholder="password" value={this.state.user.password} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
-            </div>
+              <div>
+                <label>Password</label>
+                <input className="Inputs" type="password" name="password" placeholder="password" value={this.state.user.password} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
+              </div>
 
-            <div>
-              <label>Email</label>
-              <input type="email" name="email" placeholder="Email" checked={this.state.user.email} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
-            </div>
-            <div>
-              <input type="submit" value="Create account" />
-            </div>
-          </form>
+              <div>
+                <label>Email</label>
+                <input className="Inputs" type="email" name="email" placeholder="Email" checked={this.state.user.email} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
+              </div>
+              <div>
+                <input type="submit" value="Create account" />
+              </div>
+            </form>
+          </div>
+          <div className="SignupIframe">
+            <iframe className= "Fullscreen" src="https://poly.google.com/view/3mHT-lSmFvK/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
+          </div>
         </div>
       </MainLayout>
     )

@@ -5,7 +5,6 @@
 }
 
 .ProfilePage .allExhibitions{
-  font-size:1em;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -14,5 +13,20 @@
 }
 
 .ProfilePage .allExhibitions .exhibitionDetails{
-  width:50%;
+  width:40%;
+  padding: 2% 5%;
+}
+
+.ProfilePage .allExhibitions .exhibitionDetails .ExhibitionItem{
+  background-color:#4E4D5C;
+  height:50vh;
+}
+
+.ExhibitionItem h1  {
+  font-size: 1.4em;
+}
+
+.ExhibitionItem h2 {
+  font-size:1em;
+  font-weight: lighter
 }
