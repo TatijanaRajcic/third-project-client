@@ -73,7 +73,8 @@ class ExhibitionItem extends Component {
           {
             this.state.clicked?
             <>
-              <button className="unfavorite" onClick={()=>{this.removeFavorite();this.beingDeleted()}}><img src="/images/red-heart.png" alt=""/></button>
+              <button className="unfavorite"><img src="/images/red-heart.png" alt=""/></button>
+              {/* <button className="unfavorite" onClick={()=>{this.removeFavorite();this.beingDeleted()}}><img src="/images/red-heart.png" alt=""/></button> */}
             </>
             :
             <>
