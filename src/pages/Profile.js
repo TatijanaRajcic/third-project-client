@@ -15,6 +15,9 @@ export default class Profile extends Component {
       exhibitions: [],
       error: null
     }
+
+    this.deleteExhibition = this.deleteExhibition.bind(this);
+
   }
 
   componentDidMount() {
@@ -25,6 +28,25 @@ export default class Profile extends Component {
       })
       .catch((error)=>{
         this.setState({error:error})
+      })
+  }
+
+  deleteExhibition = function(exhibitionId) {
+    debugger
+    return axios({
+      method: "GET",
+      baseURL: process.env.REACT_APP_API,
+			url: `/exhibition/delete-exhibition/${exhibitionId}`,
+    })
+      .then(()=> {
+        debugger
+        this.setState({error: ""});
+      })
+      .catch((err)=> {
+        this.setState({error: err.response.data.message});
+        if (err.response.data.message === "Forbidden") {
+          this.props.history.push("/login"); // to redirect
+        }
       })
   }
 
@@ -41,6 +63,7 @@ export default class Profile extends Component {
             name = {exhibition.name}
             description = {exhibition.description}
             creator = {exhibition.creator.username}
+            deleteExhibition = {this.deleteExhibition}
             // CHANGER CE BOUT DE CODE PR POUVOIR ACCEDER AUX PROPERTIES DE L'OBJECT EXHIBITION.IMAGES[0]
             // image = {exhibition.images[0].imgPath}
             // https://www.svrf.com/storage/svrf-previews/4537166810054656/images/thumbStandard.jpg

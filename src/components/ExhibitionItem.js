@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from "../utils/axios";
 import { withRouter } from "react-router"; 
-import "../stylesheets/ExhibitionItem.css"
+import "../stylesheets/ExhibitionItem.css";
+import {Link} from "react-router-dom";
 
 
 class ExhibitionItem extends Component {
@@ -63,6 +64,7 @@ class ExhibitionItem extends Component {
           </>
           :
           <>
+            <button className="remove" onClick={()=>{this.props.deleteExhibition(this.props.id)}}><img src="/images/remove.png" alt=""/></button>
           </>
         }
         <img src={this.props.image} alt=""/>
@@ -89,6 +91,9 @@ class ExhibitionItem extends Component {
           <>
           </>
         }
+        <Link to={`/show/${this.props.id}`}>
+          <img src="/images/details.png" alt=""/>
+        </Link>
       </div>
     )
   }
