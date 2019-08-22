@@ -16,6 +16,7 @@ export default class ImgItem extends Component {
     }
 
     this.beingAdded = this.beingAdded.bind(this)
+    this.beingDeleted = this.beingDeleted.bind(this)
 
   }
 

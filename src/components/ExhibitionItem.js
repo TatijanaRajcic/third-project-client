@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from "../utils/axios";
 import { withRouter } from "react-router"; 
-
+import "../stylesheets/ExhibitionItem.css"
 
 
 class ExhibitionItem extends Component {
@@ -9,15 +9,29 @@ class ExhibitionItem extends Component {
   constructor(props){
     super(props);
     this.state = {
-      error:null
+      error:null,
+      clicked: false
     }
 
     this.addFavorite = this.addFavorite.bind(this);
+    this.beingAdded = this.beingAdded.bind(this)
+    this.beingDeleted = this.beingDeleted.bind(this)
 
   }
 
+  beingAdded() {
+    this.setState({
+      clicked:true
+    })
+  }
+
+  beingDeleted() {
+    this.setState({
+      clicked:false
+    })
+  }
+
   addFavorite() {
-    debugger
     return axios({
       method: "PUT",
       baseURL: process.env.REACT_APP_API,
@@ -55,7 +69,20 @@ class ExhibitionItem extends Component {
         {
           this.props.location.pathname === "/index"?
           <>
-            <button onClick={this.addFavorite}>Favorite</button>
+
+          {
+            this.state.clicked?
+            <>
+              <button className="unfavorite" onClick={()=>{this.removeFavorite();this.beingDeleted()}}><img src="/images/red-heart.png" alt=""/></button>
+            </>
+            :
+            <>
+              <button className="favorite" onClick={()=>{this.addFavorite();this.beingAdded()}}><img src="/images/heart.png" alt=""/></button>
+            </>
+          }
+
+{/* <button className="favorite" onClick={this.addFavorite}><img src="/images/heart.png" alt=""/></button> */}
+
           </>
           :
           <>

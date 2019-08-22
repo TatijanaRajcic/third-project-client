@@ -142,15 +142,15 @@ class ShowExhibition extends Component {
                       <input type="text" name="name" value={this.state.exhibition.name} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
                     </div>
                     <div className="InputField">
-                      <label>Description</label>
-                      <input type="text" name="description" value={this.state.exhibition.description} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
+                      <label for="description">Description</label>
+                      <textarea className="TextArea" name="description" rows="15" cols="30" alue={this.state.exhibition.description} onChange={this.handleFormChange}></textarea>
                     </div>
                     <div>
                       <p>(Psst... You can move your images)</p>
                     </div>
                   </div>
                   <div className="BottomPage">
-                    <input type="submit" value="Save your exhibition" />
+                    <input className="SubmitBtn" type="submit" value="Save your exhibition" />
                   </div>
                 </form>
               </div>

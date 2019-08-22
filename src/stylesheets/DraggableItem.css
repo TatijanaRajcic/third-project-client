@@ -1,0 +1,17 @@
+.FinalizeExhibition .oneExhibitionImage{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.FinalizeExhibition .oneExhibitionImage .DeleteBtn{
+  background-color:white;
+  padding:1.5%;
+  margin:2%;
+  border-radius:100px;
+  border:none;
+  font-family: 'Shrikhand', cursive;
+  font-weight:lighter;
+  font-size:1em;
+  color:black
+}

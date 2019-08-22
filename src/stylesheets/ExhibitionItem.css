@@ -6,3 +6,8 @@
   font-size:1em;
   font-weight: lighter
 }
+
+.favorite, .unfavorite{
+  background:none;
+  border:none
+}

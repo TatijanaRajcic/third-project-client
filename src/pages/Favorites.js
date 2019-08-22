@@ -42,7 +42,7 @@ export default class Favorites extends Component {
             description = {exhibition.description}
             creator = {exhibition.creator.username}
             // CHANGER CE BOUT DE CODE PR POUVOIR ACCEDER AUX PROPERTIES DE L'OBJECT EXHIBITION.IMAGES[0]
-            image = {exhibition.images[0].imgPath}
+            // image = {exhibition.images[0].imgPath}
             // https://www.svrf.com/storage/svrf-previews/4537166810054656/images/thumbStandard.jpg
           />
         </div>

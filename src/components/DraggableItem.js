@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Draggable from 'react-draggable';
+import "../stylesheets/DraggableItem.css"
 
 export default class DraggableItem extends Component {
 
@@ -50,9 +51,7 @@ export default class DraggableItem extends Component {
       <Draggable position={controlledPosition} {...dragHandlers} onStop={this.onControlledDragStop}>
         <div className="oneExhibitionImage">
           <img src={this.props.src} alt=""/>
-          <>
-            <button className="DeleteBtn" onClick={()=>{this.props.deleteImage(this.props.id)}}>Remove</button>
-          </>
+          <button className="DeleteBtn" onClick={()=>{this.props.deleteImage(this.props.id)}}>Remove</button>
         </div>
       </Draggable>
     )

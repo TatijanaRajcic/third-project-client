@@ -148,7 +148,10 @@ export default class ChooseImages extends Component {
               :
               <>
                 <div className="SearchMessage">
-                  <h1>Sorry but this search was unsuccessful! Look for another artist!</h1>
+                  <h1>Sorry but this search was unsuccessful!</h1>
+                </div>
+                <div className="SearchMessage">
+                  <h1>Look for another artist!</h1>
                 </div>
               </>
             }
