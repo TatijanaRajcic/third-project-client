@@ -1,0 +1,41 @@
+.UploadImages{ 
+  overflow: auto; 
+  height: auto;
+  background-color:black;
+  font-size: 1.8em;
+  color:white;
+  height:95vh;
+  color:#F1D6B8;
+  font-family: 'Shrikhand', cursive;
+}
+
+.UploadImages h1{
+  margin:0;
+  padding: 1% 0;
+}
+
+.UploadImages .SubmitBtnUpload {
+  font-size:1em;
+  padding:1.5%;
+  border-radius:100px;
+  margin-bottom:2%;
+  background-color:#F1D6B8;
+  color:black;
+  font-family: 'Faster One', cursive;
+  width:20%;
+  margin:3% 3%
+}
+
+.UploadImages .FullPage {
+  display:flex;
+  flex-direction: column;
+  height:80%
+}
+
+.UploadImages .TopPage{
+  flex: 1 0 auto;
+}
+
+.UploadImages .BottomPage{
+  flex-shrink: 0;
+}

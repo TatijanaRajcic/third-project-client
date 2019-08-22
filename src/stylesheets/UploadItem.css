@@ -1,0 +1,51 @@
+.oneUploadItem{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+}
+
+.oneUploadItem .oneUploadItemBox {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size:0.8em;
+  background-color:#F1D6B8;
+  width:40%;
+  color:black;
+  padding:2%;
+  margin: 3%
+}
+
+.oneUploadItem .oneInput{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:2%
+}
+
+.oneUploadItem .TextArea {
+  background-color:black;
+  color:#F1D6B8;
+  outline: none
+}
+
+.oneUploadItem .InputField {
+  background-color:black;
+  color:#F1D6B8;
+  border:none;
+  padding:1%
+}
+
+.oneUploadItem .oneFileInput{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  text-align:center;
+}
+
+.oneUploadItem .InputFile{
+  font-size: 1em;
+  font-family: 'Shrikhand', cursive;
+}

@@ -1,0 +1,18 @@
+.ProfilePage {
+  color: white;
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.8em; 
+}
+
+.ProfilePage .allExhibitions{
+  font-size:1em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width:100%;
+}
+
+.ProfilePage .allExhibitions .exhibitionDetails{
+  width:50%;
+}

@@ -1,0 +1,59 @@
+.ChooseImages{ 
+  overflow: auto; 
+  height: auto;
+  background-color:black;
+  font-size: 1.8em;
+  color:white;
+}
+
+.ChooseImages > h1{
+  margin:0;
+  padding: 1% 0;
+  color:#B3BED8;
+  font-family: 'Shrikhand', cursive;
+}
+
+.ChooseImages .allMuseumImages{
+  display:flex;
+  flex-wrap: wrap;
+  width:96%;
+  justify-content: space-between;
+  margin: 0 2%;
+  background-color:black
+}
+
+.ChooseImages .SubmitBtn{
+  font-size:1em;
+  padding:1.5%;
+  border-radius:100px;
+  margin-bottom:2%;
+  background-color:#B3BED8;
+  color:black;
+  font-family: 'Faster One', cursive;
+  width:20%;
+  margin:3% 3%
+}
+
+.ChooseImages .SearchMessage {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:77%
+}
+
+.ChooseImages .InputQuery {
+  display:flex;
+  justify-content: center
+}
+
+.ChooseImages .QueryBtn {
+  background-color: black;
+  color:#B3BED8
+}
+
+.ChooseImages .InputField{
+  background-color: #B3BED8;
+  border:none;
+  color:black;
+  padding:0.5%
+}

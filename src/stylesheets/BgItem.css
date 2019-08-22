@@ -1,0 +1,29 @@
+/* .BgItem .Blur {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+} */
+
+.BgItem {
+  width:500px;
+  height:30vh;
+  border:none;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  margin:2.5%
+}
+
+.BgItem iframe{
+  width:500px;
+  height:30vh;
+  border:none
+}
+
+.BgItem .BgButton{
+  width:100%;
+  padding:2%;
+  font-family: 'Monoton', cursive;
+  font-size:0.6em;
+  background-color:#ECE6F4;
+  border:none
+}

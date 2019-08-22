@@ -1,0 +1,13 @@
+.oneExhitionImageContainer {
+  display:flex;
+  flex-direction: column;
+  width:30vh;
+}
+
+.oneExhitionImageContainer .InfoContainer{
+  background-color:rgba(255, 255, 255, 0.8 );
+  position:absolute;
+  display:flex;
+  align-items:center;
+  height:100%
+}

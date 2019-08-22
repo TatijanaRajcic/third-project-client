@@ -1,0 +1,13 @@
+.Nav{
+  display:flex;
+  height: 5vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color:black;
+  color:white;
+  padding:0 2.5%
+}
+
+.Nav > div {
+  padding:5%
+}

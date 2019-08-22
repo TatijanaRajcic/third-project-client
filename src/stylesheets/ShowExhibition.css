@@ -1,0 +1,55 @@
+/* the whole page container */
+.ExhibitionContainer{
+  display:flex;
+  width:100%;
+  font-size:1.3em;
+  font-family: 'Shrikhand', cursive;
+}
+
+/* the whole images container */
+.ExhibitionContainer .ImagesContainer {
+  display:flex;
+  flex-wrap: wrap;
+  width:80%;
+  height:95vh;
+  background-color:rgba(255, 255, 255, 0.3);
+  justify-content: center;
+  align-items:center;
+}
+
+/* one image */
+.ExhibitionContainer .oneExhibitionImage img {
+  width:30vh
+}
+
+/* the content container */
+.ExhibitionContainer .ContentContainer{
+  width: 20%;
+  background-color:black;
+  border-top:1px solid #313638;
+  color:white;
+}
+
+/* the iframe in the background */
+.ExhibitionContainer .FullScreen {
+  position:absolute;
+  left:0;
+  top:5vh;
+  z-index:-1;
+  width: 80%;
+  height: 95vh;
+}
+
+.ExhibitionContainer iframe {
+  border:none;
+}
+
+.ExhibitionContainer .ContentContainer h1{
+  font-family: 'Faster One', cursive;
+  margin-bottom: 15%
+}
+
+/* .BgItem .Blur {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+} */

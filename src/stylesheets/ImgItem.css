@@ -1,0 +1,46 @@
+.oneMuseumImage {
+  height:35vh;
+  width: 20vw;
+  background-color:#B3BED8;
+  color:black;
+  font-size:0.4em;
+  margin:7% 0;
+  display:flex;
+  flex-direction: column
+}
+
+.oneMuseumImage .TitleContainer, .oneMuseumImage .BtnContainer {
+  height:15%;
+  padding:5%;
+}
+
+.oneMuseumImage .TitleContainer h1 {
+  height:100%;
+  margin:0
+}
+
+/* https://github.com/daxko/react-auto-text#readme */
+
+.oneMuseumImage .ImageContainer {
+  height:70%
+}
+
+.oneMuseumImage .ImageContainer img {
+  height:80%
+}
+
+.oneMuseumImage .DeleteBtn{
+  background-color:red;
+  border:none
+}
+
+.oneMuseumImage .AddBtn{
+  background-color:green;
+  border:none
+}
+
+.oneMuseumImage .Ellipsis {
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis
+}

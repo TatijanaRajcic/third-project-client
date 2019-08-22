@@ -1,0 +1,50 @@
+.Home{
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+  width:100%;
+  font-size:1.8em;
+  font-family: 'Shrikhand', cursive;
+  height:95vh
+}
+
+.Home .LeftSideBar {
+  width:15.8%;
+  background-color:#2E2C2B;
+  height:95vh;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home .RightSideBar {
+  width:16.2%;
+  background-color:#2E2C2B;
+  height:95vh;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home .LeftSideBar a, .Home .RightSideBar a {
+  text-decoration: none;
+  color:white
+}
+
+.Home .Empty{
+  width:68%
+}
+
+.Home .FullScreen {
+  position:absolute;
+  left:15%;
+  top:5vh;
+  z-index:-1;
+  width: 70%;
+  height: 95vh;
+  border:none
+}

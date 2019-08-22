@@ -1,0 +1,20 @@
+.ChooseBackground{
+  background-color:black;
+  color: white;
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.8em;
+}
+
+.ChooseBackground h1{
+  margin:0;
+  padding: 1% 0;
+  color:#ECE6F4
+}
+
+.ChooseBackground .allBackgrounds {
+  display:flex;
+  flex-wrap: wrap;
+  width:100%;
+  justify-content: center;
+  align-items:center;
+}
