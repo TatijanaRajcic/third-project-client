@@ -55,8 +55,8 @@ class ExhibitionItem extends Component {
     return (
       <div className="ExhibitionItem">
         <h1>{this.props.name}</h1>
-        <h2>About : {this.props.description}</h2>
         <img className="exhibitionHighlight"src={this.props.image} alt=""/>
+        <h2>About : {this.props.description}</h2>
         <div className="FooterContainer">
           {
             this.props.location.pathname !== "/profile"?
