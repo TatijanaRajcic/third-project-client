@@ -3,8 +3,11 @@ import axios from "../utils/axios";
 import MainLayout from "../layout/MainLayout";
 import ExhibitionItem from "../components/ExhibitionItem";
 import "../stylesheets/Profile.css";
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import Auth from "../utils/Auth";
 const auth = new Auth();
+
 
 export default class Profile extends Component {
 
@@ -29,6 +32,10 @@ export default class Profile extends Component {
       .catch((error)=>{
         this.setState({error:error})
       })
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
   }
 
   deleteExhibition = function(exhibitionId) {
@@ -80,6 +87,7 @@ export default class Profile extends Component {
             <div className="allExhibitions">
               {exhibitionImages}
             </div>
+            <button onClick={this.scrollToTop} className="ScrollBtn">Up</button>
           </div>
         </MainLayout>
       </div>

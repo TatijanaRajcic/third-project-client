@@ -3,7 +3,9 @@ import axios from "../utils/axios";
 // import axiosModule from "axios";
 import MainLayout from "../layout/MainLayout";
 import ExhibitionItem from "../components/ExhibitionItem";
-import "../stylesheets/IndexExhibition.css"
+import "../stylesheets/IndexExhibition.css";
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class ShowExhibition extends Component {
 
@@ -25,6 +27,10 @@ export default class ShowExhibition extends Component {
       .catch((error)=>{
         this.setState({error:error})
       })
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
   }
 
   render() {
@@ -54,6 +60,7 @@ export default class ShowExhibition extends Component {
             <div className="allExhibitions">
               {exhibitionImages}
             </div>
+            <button onClick={this.scrollToTop} className="ScrollBtn">Up</button>
           </div>
         </MainLayout>
       </div>

@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component, Suspense} from 'react';
 import './App.css';
-import ChooseBackground from './pages/ChooseBackground';
 import ChooseImages from './pages/ChooseImages';
 import UploadImages from './pages/UploadImages';
 import Finalize from './pages/Finalize';
@@ -13,6 +12,8 @@ import Signup from './pages/Signup';
 import ProtectedRoute from './components/ProtectedRoute';
 import IndexExhibitions from './pages/IndexExhibitions';
 import {Route} from "react-router-dom";
+const preload = import('./pages/ChooseBackground')
+const ChooseBackground = React.lazy(() => preload);
 
 
 class App extends Component {
@@ -25,10 +26,15 @@ class App extends Component {
         <Route path="/login" component={Login}/> 
         <Route path="/signup" component={Signup}/> 
 
-        <ProtectedRoute 
+        
+        <Route 
           redirectUrl='/login' 
           path="/background" 
-          component={ChooseBackground}
+          render={(props)=> 
+            <Suspense fallback={<div>Loading...</div>}>
+              <ChooseBackground {...props} />
+              </Suspense>
+          }
         />
 
         <ProtectedRoute 
