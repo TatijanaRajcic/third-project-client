@@ -31,7 +31,7 @@ class Show extends Component {
     axios.get(`${process.env.REACT_APP_API}/exhibition/show/${currentExhibition}`)
       .then((response)=>{
         this.setState({exhibition:response.data}, () => {
-          axiosModule.get(`http://api.voicerss.org/?key=6e944fc56139476f827e50b5e3cfe966&hl=en-us&src=${response.data.description}`)
+          axiosModule.get(`https://api.voicerss.org/?key=6e944fc56139476f827e50b5e3cfe966&hl=en-us&src=${response.data.description}`)
           .then((response)=>{
             this.setState({audio:response.request.responseURL})
           })
