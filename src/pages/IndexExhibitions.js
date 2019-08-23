@@ -7,7 +7,7 @@ import "../stylesheets/IndexExhibition.css";
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-export default class ShowExhibition extends Component {
+export default class IndexExhibitions extends Component {
 
   constructor(props){
     super(props);
@@ -36,6 +36,10 @@ export default class ShowExhibition extends Component {
   render() {
 
     let exhibitionImages = this.state.exhibitions.map((exhibition) => {
+      let imgPath = ''
+      if(exhibition.images.length) {
+        imgPath = exhibition.images[0].imgPath
+      }
       return (
         <div className="exhibitionDetails">
           <ExhibitionItem 
@@ -44,9 +48,7 @@ export default class ShowExhibition extends Component {
             name = {exhibition.name}
             description = {exhibition.description}
             creator = {exhibition.creator.username}
-            // CHANGER CE BOUT DE CODE PR POUVOIR ACCEDER AUX PROPERTIES DE L'OBJECT EXHIBITION.IMAGES[0]
-            // image = {exhibition.images[0].imgPath}
-            // https://www.svrf.com/storage/svrf-previews/4537166810054656/images/thumbStandard.jpg
+            image = {imgPath}
           />
         </div>
       )

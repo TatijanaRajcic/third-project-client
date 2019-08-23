@@ -1,3 +1,9 @@
+.ExhibitionItem{
+  display:flex;
+  flex-direction: column;
+  align-items: center
+}
+
 .ExhibitionItem h1  {
   font-size: 1.4em;
 }
@@ -10,4 +16,23 @@
 .favorite, .unfavorite, .remove{
   background:none;
   border:none
+}
+
+.ExhibitionItem .exhibitionHighlight{
+  height:30vh
+}
+
+.ExhibitionItem .FooterContainer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin:2%
+}
+
+.ExhibitionItem .FooterContainer .CreatorTitle {
+  width:100%
+}
+
+.ExhibitionItem .FooterContainer img {
+  padding: 0 20%
 }

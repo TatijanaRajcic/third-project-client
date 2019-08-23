@@ -7,7 +7,7 @@ import DraggableItem from "../components/DraggableItem";
 import qs from "querystring"; // used for parsing a javascript object in the right format (x-www-form-urlencoded)
 
 
-class ShowExhibition extends Component {
+class Finalize extends Component {
 
   constructor(props){
     super(props);
@@ -162,4 +162,4 @@ class ShowExhibition extends Component {
   }
 }
 
-export default ShowExhibition
+export default Finalize

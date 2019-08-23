@@ -44,7 +44,9 @@ export default class BgItem extends Component {
   render() {
     return (
       <div className="BgItem">
-        <iframe sandbox="allow-scripts" style={{display: this.state.loaded ? "block": "none"}} onLoad={this.loadHandler} src={this.props.embedUrl} allowFullScreen/>
+        <LazyLoad>
+          <iframe sandbox="allow-scripts" style={{display: this.state.loaded ? "block": "none"}} onLoad={this.loadHandler} src={this.props.embedUrl} allowFullScreen/>
+        </LazyLoad> 
         <button className="BgButton" onClick={this.chooseBackground}>select</button>
       </div>
     )

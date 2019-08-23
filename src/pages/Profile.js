@@ -25,18 +25,25 @@ export default class Profile extends Component {
 
   componentDidMount() {
 
+    this.getExhibitions()
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  getExhibitions(){
+
     axios.get(`${process.env.REACT_APP_API}/exhibition/own-exhibitions`)
       .then((response)=>{
         this.setState({exhibitions:response.data})
+        debugger
       })
       .catch((error)=>{
         this.setState({error:error})
       })
   }
 
-  scrollToTop() {
-    scroll.scrollToTop();
-  }
 
   deleteExhibition = function(exhibitionId) {
     debugger
@@ -46,8 +53,9 @@ export default class Profile extends Component {
 			url: `/exhibition/delete-exhibition/${exhibitionId}`,
     })
       .then(()=> {
-        debugger
-        this.setState({error: ""});
+        const exhibitionsCopy = [...this.state.exhibitions];
+        const exhibitions = exhibitionsCopy.filter(exhibition => exhibition._id !== exhibitionId);
+        this.setState({error: "", exhibitions});
       })
       .catch((err)=> {
         this.setState({error: err.response.data.message});
@@ -62,6 +70,10 @@ export default class Profile extends Component {
     let user = auth.getUser()
 
     let exhibitionImages = this.state.exhibitions.map((exhibition) => {
+      let imgPath = ''
+      if(exhibition.images.length) {
+        imgPath = exhibition.images[0].imgPath
+      }
       return (
         <div className="exhibitionDetails">
           <ExhibitionItem 
@@ -71,9 +83,7 @@ export default class Profile extends Component {
             description = {exhibition.description}
             creator = {exhibition.creator.username}
             deleteExhibition = {this.deleteExhibition}
-            // CHANGER CE BOUT DE CODE PR POUVOIR ACCEDER AUX PROPERTIES DE L'OBJECT EXHIBITION.IMAGES[0]
-            // image = {exhibition.images[0].imgPath}
-            // https://www.svrf.com/storage/svrf-previews/4537166810054656/images/thumbStandard.jpg
+            image = {imgPath}
           />
         </div>
       )

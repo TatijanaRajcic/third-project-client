@@ -52,48 +52,49 @@ class ExhibitionItem extends Component {
   }
 
   render() {
-
     return (
       <div className="ExhibitionItem">
-        <h1>Exhibition: {this.props.name}</h1>
-        <h2>Exhibition description: {this.props.description}</h2>
-        {
-          this.props.location.pathname !== "/profile"?
-          <>
-            <h2>Created by: {this.props.creator}</h2>
-          </>
-          :
-          <>
-            <button className="remove" onClick={()=>{this.props.deleteExhibition(this.props.id)}}><img src="/images/remove.png" alt=""/></button>
-          </>
-        }
-        <img src={this.props.image} alt=""/>
-        {
-          this.props.location.pathname === "/index"?
-          <>
-
+        <h1>{this.props.name}</h1>
+        <h2>About : {this.props.description}</h2>
+        <img className="exhibitionHighlight"src={this.props.image} alt=""/>
+        <div className="FooterContainer">
           {
-            this.state.clicked?
+            this.props.location.pathname !== "/profile"?
             <>
-              <button className="unfavorite"><img src="/images/red-heart.png" alt=""/></button>
-              {/* <button className="unfavorite" onClick={()=>{this.removeFavorite();this.beingDeleted()}}><img src="/images/red-heart.png" alt=""/></button> */}
+              <h2 className="CreatorTitle">Created by: {this.props.creator}</h2>
             </>
             :
             <>
-              <button className="favorite" onClick={()=>{this.addFavorite();this.beingAdded()}}><img src="/images/heart.png" alt=""/></button>
+              <button className="remove" onClick={()=>{this.props.deleteExhibition(this.props.id)}}><img src="/images/remove.png" alt=""/></button>
             </>
           }
+          {
+            this.props.location.pathname === "/index"?
+            <>
 
-{/* <button className="favorite" onClick={this.addFavorite}><img src="/images/heart.png" alt=""/></button> */}
+            {
+              this.state.clicked?
+              <>
+                <button className="unfavorite"><img src="/images/red-heart.png" alt=""/></button>
+                {/* <button className="unfavorite" onClick={()=>{this.removeFavorite();this.beingDeleted()}}><img src="/images/red-heart.png" alt=""/></button> */}
+              </>
+              :
+              <>
+                <button className="favorite" onClick={()=>{this.addFavorite();this.beingAdded()}}><img src="/images/heart.png" alt=""/></button>
+              </>
+            }
 
-          </>
-          :
-          <>
-          </>
-        }
-        <Link to={`/show/${this.props.id}`}>
-          <img src="/images/details.png" alt=""/>
-        </Link>
+            {/* <button className="favorite" onClick={this.addFavorite}><img src="/images/heart.png" alt=""/></button> */}
+
+            </>
+            :
+            <>
+            </>
+          }
+          <Link to={`/show/${this.props.id}`}>
+            <img src="/images/details.png" alt=""/>
+          </Link>
+        </div>
       </div>
     )
   }

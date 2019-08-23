@@ -26,7 +26,7 @@ export default class PositionedImage extends Component {
       .then((response)=> {
         this.setState({
           defaultX: response.data.imageX,
-          defaultY: response.data.imageY
+          defaultY: response.data.imageY 
         });
         // this.props.history.push("/images"); // to redirect
       })
