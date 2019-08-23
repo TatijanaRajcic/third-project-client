@@ -99,7 +99,16 @@ class Finalize extends Component {
 			url: `/exhibition/delete-image/${imageId}`,
     })
       .then(()=> {
-        this.setState({error: ""});
+        const imagesCopy = [...this.state.exhibition.images];
+        const images = imagesCopy.filter(image => image._id !== imageId);
+        this.setState(prevState => ({
+          error:"",
+          exhibition: {                   // object that we want to update
+              ...prevState.exhibition,    // keep all other key-value pairs
+              images: images       // update the value of specific key
+          }
+        }))
+        // this.setState({error: ""});
       })
       .catch((err)=> {
         this.setState({error: err.response.data.message});
@@ -109,6 +118,7 @@ class Finalize extends Component {
       })
   }
 
+  
   render() {
 
     let exhibitionImages = this.state.exhibition.images.map((image) => {
