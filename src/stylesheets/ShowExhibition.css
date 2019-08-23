@@ -49,6 +49,10 @@
   margin-bottom: 15%
 }
 
+.ExhibitionContainer .Content{
+  padding:10%
+}
+
 /* .BgItem .Blur {
   -webkit-filter: blur(2px);
   filter: blur(2px);
