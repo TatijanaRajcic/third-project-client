@@ -1,7 +1,8 @@
 .ExhibitionItem{
   display:flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  padding:5%
 }
 
 .ExhibitionItem h1  {
