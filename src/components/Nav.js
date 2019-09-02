@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import { withRouter } from "react-router"; 
-import "../stylesheets/Nav.css"
-import Auth from "../utils/Auth";
-const auth = new Auth();
 // withRouter is a Higher Order Component (HOC).
 // HOC's are functions that take a react component as an argument.
 // The HOC returns that react component with added functionality.
@@ -14,6 +11,12 @@ const auth = new Auth();
 // withRouter: https://reacttraining.com/react-router/web/api/withRouter
 // HOCS in general: https://reactjs.org/docs/higher-order-components.html
 
+// import stylesheet
+import "../stylesheets/Nav.css";
+
+// import Authentification
+import Auth from "../utils/Auth";
+const auth = new Auth();
 
 class Nav extends Component {
   constructor(props){
@@ -60,43 +63,43 @@ class Nav extends Component {
   render(){
     return (
       <nav className="Nav">
-        <div>
+        <div className="nav-icon-container">
           <Link to="/">
-            <img src="/images/home.png" alt=""/>
+            <img className="nav-icon" src="/images/home.png" alt="Go back to Homepage"/>
           </Link>
         </div>
-        <div>
+        <div className="nav-icon-container">
           <Link to="/index">
-            <img src="/images/search.png" alt=""/>
+            <img className="nav-icon" src="/images/search.png" alt="Search among all exhibitions"/>
           </Link>
         </div>
         {
           this.state.user? 
           <>
-            <div>
+            <div className="nav-icon-container">
               <Link to="/profile">
-                <img src="/images/user.png" alt=""/>
+                <img className="nav-icon" src="/images/user.png" alt="Go to your profile"/>
               </Link>
             </div>
-            <div>
+            <div className="nav-icon-container">
               <Link to="/favorites">
-                <img src="/images/heart.png" alt=""/>
+                <img className="nav-icon" src="/images/heart.png" alt="Go to your favorites"/>
               </Link>
             </div>
-            <div>
-              <a href="#" onClick = {this.handleLogout} ><img className="navimg" src="/images/logout.png"alt=""/></a>    
+            <div className="nav-icon-container">
+              <a onClick = {this.handleLogout} ><img className="nav-icon" src="/images/logout.png" alt="Link for logout"/></a>    
             </div>
           </>
           :
           <>
-            <div>
+            <div className="nav-icon-container">
               <Link to="/login">
-                <img src="/images/login.png" alt=""/>
+                <img className="nav-icon" src="/images/login.png" alt="Link to login page"/>
               </Link>
             </div>
-            <div>
+            <div className="nav-icon-container">
               <Link to="/signup">
-                <img src="/images/signup.png" alt=""/>
+                <img className="nav-icon" src="/images/signup.png" alt="Link to signup page"/>
               </Link>
             </div>
           </>
@@ -105,7 +108,6 @@ class Nav extends Component {
     )
   }
 }
-
 
 // Adding the props that belong to components rendered by Route to Nav
 // by using withRouter, which is a HOC.

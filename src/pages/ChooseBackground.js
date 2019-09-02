@@ -30,7 +30,7 @@ export default class ChooseBackground extends Component {
       <MainLayout>
         <div className="ChooseBackground">
           <h1>step 1 / choose background</h1>
-          <div className="allBackgrounds">
+          <div className="backgrounds-container">
             <Suspense fallback={<div>Loading...</div>}>
               {allBackgrounds}
             </Suspense>

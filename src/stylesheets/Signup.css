@@ -1,11 +1,5 @@
-.Signup .Inputs{
-  padding: 10px;
-  border: none;
-}
-
-.Signup{
+.Signup {
   width:100%;
-  font-size:1.8em;
   font-family: 'Shrikhand', cursive;
   height:95vh;
   color:black;
@@ -14,7 +8,64 @@
   align-items: center
 }
 
-.Signup .FullScreen {
+@media (min-width:750px) {
+  .Signup {
+    font-size:1.5em;
+  }
+}
+
+.Signup .signup-content {
+  width:75%;
+  background-color:rgba(255, 255, 255, 0.7);
+  padding:2%
+}
+
+@media (min-width:750px) {
+  .Signup .signup-content {
+    width:50%;
+  }
+}
+
+@media (min-width:1000px) {
+  .Signup .signup-content {
+    width:20%;
+  }
+}
+
+.Signup .signup-content form {
+  margin:0
+}
+
+.Signup .signup-content  div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:2%;
+}
+
+.Signup .signup-inputs{
+  padding: 3%;
+  border: none;
+  width:50%
+}
+
+.Signup .signup-inputs::placeholder{
+  font-family: 'Shrikhand', cursive;
+  text-align:center
+}
+
+.Signup .signup-inputs:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: 'Shrikhand', cursive;
+  text-align:center
+}
+
+.Signup .signup-inputs::-ms-input-placeholder { /* Microsoft Edge */
+  font-family: 'Shrikhand', cursive;
+  text-align:center
+}
+
+.Signup .signup-iframe {
   position:absolute;
   left:0;
   top:5vh;
@@ -24,23 +75,16 @@
   border:none
 }
 
-.Signup .SignupContent {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width:20%;
-  background-color:rgba(255, 255, 255, 0.7);
-  padding:2%
+.Signup .signup-btn{
+  background-color:black;
+  color:white;
+  padding:3%;
+  border:none;
+  font-family: 'Shrikhand', cursive;
+  width:50%
 }
 
-.Signup .SignupContent  div {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top:2%;
-}
-
-.Signup .SignupContent form {
-  margin:0
+.Signup .signup-btn:hover{
+  background-color:red;
+  color:white
 }

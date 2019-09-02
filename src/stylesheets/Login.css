@@ -1,11 +1,5 @@
-.Login .Inputs{
-  padding: 10px;
-  border: none;
-}
-
-.Login{
+.Login {
   width:100%;
-  font-size:1.8em;
   font-family: 'Shrikhand', cursive;
   height:95vh;
   color:white;
@@ -14,11 +8,68 @@
   align-items: center
 }
 
-.Login .Link {
+@media (min-width:750px) {
+  .Login {
+    font-size:1.5em;
+  }
+}
+
+.Login .login-link {
   color:white
 }
 
-.Login .FullScreen {
+.Login .login-content {
+  width:75%;
+  background-color:rgba(0, 0, 0, 0.7) ;
+  padding:2%
+}
+
+@media (min-width:750px) {
+  .Login .login-content {
+    width:50%;
+  }
+}
+
+@media (min-width:1000px) {
+  .Login .login-content {
+    width:20%;
+  }
+}
+
+.Login .login-content form {
+  margin:0
+}
+
+.Login .login-content  div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:2%;
+}
+
+.Login .login-inputs{
+  padding: 3%;
+  border: none;
+  width:50%
+}
+
+.Login .login-inputs::placeholder{
+  font-family: 'Shrikhand', cursive;
+  text-align:center
+}
+
+.Login .login-inputs:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: 'Shrikhand', cursive;
+  text-align:center
+}
+
+.Login .login-inputs::-ms-input-placeholder { /* Microsoft Edge */
+  font-family: 'Shrikhand', cursive;
+  text-align:center
+}
+
+.Login .login-iframe {
   position:absolute;
   left:0;
   top:5vh;
@@ -28,23 +79,19 @@
   border:none
 }
 
-.Login .LoginContent {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width:20%;
-  background-color:rgba(0, 0, 0, 0.7) ;
-  padding:2%
+.Login .login-btn{
+  background-color:white;
+  padding:3%;
+  border:none;
+  font-family: 'Shrikhand', cursive;
+  width:50%
 }
 
-.Login .LoginContent  div {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top:2%;
+.Login .login-btn:hover{
+  background-color:red;
+  color:white
 }
 
-.Login .LoginContent form {
+.Login .account-message{
   margin:0
 }

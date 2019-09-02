@@ -1,44 +1,23 @@
 .FavoritesPage{
   color: white;
   font-family: 'Shrikhand', cursive;
-  font-size: 1.8em;
+  font-size: 16px;
 }
 
-.FavoritesPage .allExhibitions{
-  display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width:100%;
+.FavoritesPage > h1{
+  padding:0% 10%
 }
 
-.FavoritesPage .allExhibitions .exhibitionDetails{
-  width:40%;
-  padding: 2% 5%;
-}
-
-.FavoritesPage .allExhibitions .exhibitionDetails .ExhibitionItem{
+.FavoritesPage .all-exhibitions-container .exhibition-details .ExhibitionItem{
   background-color:#684756;
 }
 
-.ExhibitionItem h1  {
-  font-size: 1.4em;
+
+.FavoritesPage .all-exhibitions-container .exhibition-details .ExhibitionItem:hover{
+  background-color:white;
+  color:#684756
 }
 
-.ExhibitionItem h2 {
-  font-size:1em;
-  font-weight: lighter
-}
-
-
-.FavoritesPage .ScrollBtn{
-  font-size:1em;
-  padding:1.5%;
-  border-radius:100px;
-  margin-bottom:2%;
+.FavoritesPage .scroll-btn{
   background-color:#684756;
-  color:white;
-  font-family: 'Faster One', cursive;
-  width:10%;
-  margin:3% 3%;
-  border:none
 }

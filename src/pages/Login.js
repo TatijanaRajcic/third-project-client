@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import MainLayout from "../layout/MainLayout";
+
+// import stylesheet
 import "../stylesheets/Login.css";
+
 import {Link} from "react-router-dom";
 import Auth from "../utils/Auth";
 const auth = new Auth();
@@ -48,26 +51,25 @@ class Login extends Component {
     return (
       <MainLayout>
         <div className="Login">
-          <div className="LoginContent">
+          <div className="login-content">
             <form onSubmit={this.handleFormSubmit}>{/* we don't want the default form submitting behaviour, so we're adding own submit handler   */}
               <div>
-                <label>Username</label>
-                <input className="Inputs" type="text" name="username" placeholder="username" value={this.state.user.username} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
+                <input className="login-inputs" type="text" name="username" placeholder="Username" value={this.state.user.username} onChange={this.handleFormChange} /> {/* reacts wants to be in charge of all the data   */}
               </div>
               <div>
-                <label>Password</label>
-                <input className="Inputs" type="password" name="password" placeholder="password" value={this.state.user.password} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
+                <input className="login-inputs" type="password" name="password" placeholder="Password" value={this.state.user.password} onChange={this.handleFormChange} />{/* reacts wants to be in charge of all the data   */}
               </div>
               <div>
-                <input type="submit" value="Login" />
+                <input className="login-btn" type="submit" value="Login" />
               </div>
               <p className="account-message">
-                Don't have an account? <Link className="Link" to="/signup">Sign up</Link>
+                Don't have an account?
+                <Link className="login-link" to="/signup"> Sign up</Link>
               </p>
             </form>
           </div>
-          <div className="LoginIframe">
-            <iframe className= "Fullscreen" src="https://poly.google.com/view/cV54p02NHQt/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
+          <div>
+            <iframe className= "login-iframe" src="https://poly.google.com/view/cV54p02NHQt/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
           </div>
         </div>
       </MainLayout>

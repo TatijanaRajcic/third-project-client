@@ -11,13 +11,19 @@ class ExhibitionItem extends Component {
     super(props);
     this.state = {
       error:null,
-      clicked: false
+      clicked: false,
+      hover: false
     }
 
     this.addFavorite = this.addFavorite.bind(this);
-    this.beingAdded = this.beingAdded.bind(this)
-    this.beingDeleted = this.beingDeleted.bind(this)
+    this.beingAdded = this.beingAdded.bind(this);
+    this.beingDeleted = this.beingDeleted.bind(this);
+    this.toggleHover = this.toggleHover.bind(this)
 
+  }
+
+  toggleHover() {
+    this.setState({hover: !this.state.hover})
   }
 
   beingAdded() {
@@ -52,12 +58,21 @@ class ExhibitionItem extends Component {
   }
 
   render() {
+
+    let specificIcon;
+    if (this.props.location.pathname === "/index") {
+      specificIcon = "/images/details-blue.png"
+    } else if (this.props.location.pathname ==="/profile") {
+      specificIcon = "/images/details-grey.png"
+    } else {
+      specificIcon = "/images/details-pink.png"
+    }
+
     return (
-      <div className="ExhibitionItem">
+      <div className="ExhibitionItem" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
         <h1>{this.props.name}</h1>
-        <img className="exhibitionHighlight"src={this.props.image} alt=""/>
-        <h2>About : {this.props.description}</h2>
-        <div className="FooterContainer">
+        <img className="exhibition-main-img"src={this.props.image} alt=""/>
+        <div className="exhibition-footer">
           {
             this.props.location.pathname !== "/profile"?
             <>
@@ -65,13 +80,21 @@ class ExhibitionItem extends Component {
             </>
             :
             <>
-              <button className="remove" onClick={()=>{this.props.deleteExhibition(this.props.id)}}><img src="/images/remove.png" alt=""/></button>
+              {
+                this.state.hover?
+                <>
+                  <button className="remove" onClick={()=>{this.props.deleteExhibition(this.props.id)}}><img src="/images/remove-grey.png" alt=""/></button>
+                </>
+                :
+                <>
+                  <button className="remove" onClick={()=>{this.props.deleteExhibition(this.props.id)}}><img src="/images/remove.png" alt=""/></button>
+                </>
+              }
             </>
           }
           {
             this.props.location.pathname === "/index"?
             <>
-
             {
               this.state.clicked?
               <>
@@ -80,20 +103,37 @@ class ExhibitionItem extends Component {
               </>
               :
               <>
-                <button className="favorite" onClick={()=>{this.addFavorite();this.beingAdded()}}><img src="/images/heart.png" alt=""/></button>
+              {
+                this.state.hover?
+                <>
+                  <button className="favorite" onClick={()=>{this.addFavorite();this.beingAdded()}}><img src="/images/heart-blue.png" alt=""/></button>
+                </>
+                :
+                <>
+                  <button className="favorite" onClick={()=>{this.addFavorite();this.beingAdded()}}><img src="/images/heart.png" alt=""/></button>
+                </>
+              }
               </>
             }
-
-            {/* <button className="favorite" onClick={this.addFavorite}><img src="/images/heart.png" alt=""/></button> */}
-
             </>
             :
             <>
             </>
           }
-          <Link to={`/show/${this.props.id}`}>
-            <img src="/images/details.png" alt=""/>
-          </Link>
+          {
+            this.state.hover?
+            <>
+              <Link to={`/show/${this.props.id}`}>
+                <img src={specificIcon} alt=""/>
+              </Link>
+            </>
+            :
+            <>
+              <Link to={`/show/${this.props.id}`}>
+                <img src="/images/details.png" alt=""/>
+              </Link>
+            </>
+          }
         </div>
       </div>
     )

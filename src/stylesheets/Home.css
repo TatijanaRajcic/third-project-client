@@ -1,50 +1,50 @@
-.Home{
+.Home {
   display:flex;
-  align-items: center;
   flex-wrap:wrap;
   width:100%;
-  font-size:1.8em;
+  font-size:1.2em;
   font-family: 'Shrikhand', cursive;
   height:95vh
 }
 
-.Home .LeftSideBar {
-  width:15.8%;
+@media (min-width:750px) {
+  .Home {
+    font-size:1.7em;
+  }
+}
+
+@media (min-width:1000px) {
+  .Home {
+    font-size:2.1em;
+  }
+}
+
+.Home .side-bar {
   background-color:#2E2C2B;
-  height:95vh;
   writing-mode: vertical-rl;
   text-orientation: upright;
   display:flex;
   align-items: center;
   justify-content: center;
+  width:16%;
 }
 
-.Home .RightSideBar {
-  width:16.2%;
-  background-color:#2E2C2B;
-  height:95vh;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Home .LeftSideBar a, .Home .RightSideBar a {
+.Home .side-bar a {
   text-decoration: none;
   color:white
+} 
+
+.Home .iframe-container {
+  width:68%;
 }
 
-.Home .Empty{
-  width:68%
-}
-
-.Home .FullScreen {
+.Home .iframe {
   position:absolute;
-  left:15%;
+  left:16%;
   top:5vh;
   z-index:-1;
-  width: 70%;
+  width: 75%; 
+  /* width to the iframe because than its container, so that we don't see the scrolling bar of the iframe */
   height: 95vh;
-  border:none
+  border:none;
 }

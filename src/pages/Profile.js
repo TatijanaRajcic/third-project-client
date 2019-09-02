@@ -3,6 +3,7 @@ import axios from "../utils/axios";
 import MainLayout from "../layout/MainLayout";
 import ExhibitionItem from "../components/ExhibitionItem";
 import "../stylesheets/Profile.css";
+import "../stylesheets/ExhibitionsList.css";
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import Auth from "../utils/Auth";
@@ -37,7 +38,6 @@ export default class Profile extends Component {
     axios.get(`${process.env.REACT_APP_API}/exhibition/own-exhibitions`)
       .then((response)=>{
         this.setState({exhibitions:response.data})
-        debugger
       })
       .catch((error)=>{
         this.setState({error:error})
@@ -75,7 +75,7 @@ export default class Profile extends Component {
         imgPath = exhibition.images[0].imgPath
       }
       return (
-        <div className="exhibitionDetails">
+        <div className="exhibition-details">
           <ExhibitionItem 
             key = {exhibition._id}
             id = {exhibition._id}
@@ -94,10 +94,10 @@ export default class Profile extends Component {
         <MainLayout>
           <div className="ProfilePage">
             <h1>Here are your exhibitions, {user.username} !</h1>
-            <div className="allExhibitions">
+            <div className="all-exhibitions-container">
               {exhibitionImages}
             </div>
-            <button onClick={this.scrollToTop} className="ScrollBtn">Up</button>
+            <button onClick={this.scrollToTop} className="scroll-btn">Up</button>
           </div>
         </MainLayout>
       </div>

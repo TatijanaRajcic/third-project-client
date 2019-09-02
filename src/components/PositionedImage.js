@@ -39,7 +39,6 @@ export default class PositionedImage extends Component {
   }
 
   toggleHover() {
-    console.log("hover")
     this.setState({hover: !this.state.hover})
   }
 

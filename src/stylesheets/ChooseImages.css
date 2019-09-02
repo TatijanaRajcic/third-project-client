@@ -2,22 +2,26 @@
   overflow: auto; 
   height: auto;
   background-color:black;
-  font-size: 1.8em;
   color:white;
 }
 
 .ChooseImages > h1{
-  margin:0;
-  padding: 1% 0;
+  padding: 1% 2%;
   color:#B3BED8;
   font-family: 'Shrikhand', cursive;
+}
+
+@media (min-width:750px) {
+  .ChooseImages{
+    font-size: 1.8em;
+  }
 }
 
 .ChooseImages .allMuseumImages{
   display:flex;
   flex-wrap: wrap;
   width:96%;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 2%;
   background-color:black
 }
