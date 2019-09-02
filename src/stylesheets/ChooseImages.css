@@ -51,12 +51,26 @@
 
 .ChooseImages .QueryBtn {
   background-color: black;
-  color:#B3BED8
+  color:#B3BED8;
+  font-family: 'Shrikhand', cursive;
 }
 
 .ChooseImages .InputField{
   background-color: #B3BED8;
   border:none;
   color:black;
-  padding:0.5%
+  padding:0.5%;
+  width:240px
+}
+
+.ChooseImages .InputField::placeholder{
+  font-family: 'Shrikhand', cursive;
+}
+
+.ChooseImages .InputField:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: 'Shrikhand', cursive;
+}
+
+.ChooseImages .InputField::-ms-input-placeholder { /* Microsoft Edge */
+  font-family: 'Shrikhand', cursive;
 }

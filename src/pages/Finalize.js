@@ -153,7 +153,8 @@ class Finalize extends Component {
                     </div>
                     <div className="InputField">
                       <label for="description">Description</label>
-                      <textarea className="TextArea" name="description" rows="15" cols="30" alue={this.state.exhibition.description} onChange={this.handleFormChange}></textarea>
+                      <textarea className="TextArea" name="description" value={this.state.exhibition.description} onChange={this.handleFormChange}></textarea>
+                      {/* <textarea className="TextArea" name="description" rows="15" cols="30" value={this.state.exhibition.description} onChange={this.handleFormChange}></textarea> */}
                     </div>
                     <div>
                       <p>(Psst... You can move your images)</p>

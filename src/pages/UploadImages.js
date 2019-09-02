@@ -105,7 +105,7 @@ class UploadImages extends Component {
                 {allUploads}
               </div>
               <div className="BottomPage">
-                <button className="SubmitBtnUpload" onClick={this.addArtwork}>Add one artwork</button>
+                <button className="SubmitBtnUpload" onClick={this.addArtwork}>Add</button>
                 <input className="SubmitBtnUpload" type="submit" value="Next" />
               </div>
             </form>

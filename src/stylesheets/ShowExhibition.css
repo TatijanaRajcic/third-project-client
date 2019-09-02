@@ -1,20 +1,28 @@
 /* the whole page container */
 .ExhibitionContainer{
   display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width:100%;
-  font-size:1.3em;
   font-family: 'Shrikhand', cursive;
+}
+
+@media (min-width:1000px) {
+  .ExhibitionContainer{
+    font-size:1.3em;
+  }
 }
 
 /* the whole images container */
 .ExhibitionContainer .ImagesContainer {
   display:flex;
   flex-wrap: wrap;
-  width:80%;
+  width:100%;
   height:95vh;
   background-color:rgba(255, 255, 255, 0.3);
   justify-content: center;
   align-items:center;
+  order:2;
 }
 
 /* one image */
@@ -24,10 +32,11 @@
 
 /* the content container */
 .ExhibitionContainer .ContentContainer{
-  width: 20%;
+  width: 100%;
   background-color:black;
   border-top:1px solid #313638;
   color:white;
+  order:1;
 }
 
 /* the iframe in the background */
@@ -36,8 +45,9 @@
   left:0;
   top:5vh;
   z-index:-1;
-  width: 80%;
+  width: 100%;
   height: 95vh;
+  order:2;
 }
 
 .ExhibitionContainer iframe {
@@ -46,14 +56,53 @@
 
 .ExhibitionContainer .ContentContainer h1{
   font-family: 'Faster One', cursive;
-  margin-bottom: 15%
 }
 
-.ExhibitionContainer .Content{
-  padding:10%
+@media (min-width:600px) {
+  .ExhibitionContainer .ImagesContainer{
+    width:80%;
+    order:1
+  }
+
+  .ExhibitionContainer .FullScreen{
+    width:80%;
+    order:1
+  }
+
+  .ExhibitionContainer .ContentContainer{
+    width: 20%;
+    order:2;
+  }
+
+  .ExhibitionContainer .allContent{
+    padding:0 5%
+  }
 }
 
-/* .BgItem .Blur {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-} */
+@media (max-height:850px) {
+  .ExhibitionContainer .DescriptionContainer{
+    display:none
+  }
+}
+
+.ExhibitionContainer .DescriptionContainer{
+  height:75vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.ExhibitionContainer .DescriptionContent{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: content-box; 
+}
+
+.ExhibitionContainer .audio-controls{
+  margin:2% 1%
+}
+
+.ExhibitionContainer .audio-controls audio {
+  width:100%
+}

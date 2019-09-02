@@ -71,16 +71,21 @@ class Show extends Component {
               {exhibitionImages}
             </div>
             <div className="ContentContainer">
-              <div className="Content">
+              <div className="AllContent">
                 <h1>{this.state.exhibition.name}</h1>
                 <div>
+                  <div className="DescriptionContainer">
                   <h2>About this exhibition... </h2>
-                  <p>{this.state.exhibition.description}</p>
+
+                    <p className="DescriptionContent">{this.state.exhibition.description}</p>
+                  </div>
                 </div>
-                <audio
-                  controls
-                  src={this.state.audio}>
-                </audio>
+                <div className="audio-controls">
+                  <audio
+                    controls
+                    src={this.state.audio}>
+                  </audio>
+                </div>
               </div>
             </div>
           </div>

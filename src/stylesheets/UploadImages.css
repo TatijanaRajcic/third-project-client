@@ -2,16 +2,20 @@
   overflow: auto; 
   height: auto;
   background-color:black;
-  font-size: 1.8em;
   color:white;
   height:95vh;
   color:#F1D6B8;
   font-family: 'Shrikhand', cursive;
 }
 
+@media (min-width:750px) {
+  .UploadImages{
+    font-size: 1.8em;
+  }
+}
+
 .UploadImages h1{
-  margin:0;
-  padding: 1% 0;
+  padding: 1% 2%;
 }
 
 .UploadImages .SubmitBtnUpload {

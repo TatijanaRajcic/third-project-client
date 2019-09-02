@@ -55,7 +55,7 @@
   border:none;
   font-family: 'Shrikhand', cursive;
   font-weight:lighter;
-  font-size:1.4em;
+  font-size:2em;
   color:black
 }
 
@@ -66,9 +66,16 @@
   border:none;
   font-family: 'Shrikhand', cursive;
   font-weight:lighter;
-  font-size:1.4em;
+  font-size:2em;
   color:black
 
+}
+
+
+@media (min-width:700px) {
+  .oneMuseumImage .AddBtn, .oneMuseumImage .DeleteBtn{
+    font-size:1.4em;
+  }
 }
 
 .oneMuseumImage .Ellipsis {
