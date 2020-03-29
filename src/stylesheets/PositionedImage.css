@@ -6,10 +6,15 @@
 
 .oneExhitionImageContainer .InfoContainer{
   background-color:rgba(255, 255, 255, 0.8 );
-  position:absolute;
+  border:10px solid rgba(255, 255, 255, 0.8 );
   display:flex;
   align-items:center;
-  height:100%;
-  width:100%;
   justify-content: center;
+  position:absolute;
+  height:calc(100% - 20px);
+  width:100%;
+}
+
+.oneExhitionImageContainer .oneExhibitionImage img{
+  border:10px solid black
 }

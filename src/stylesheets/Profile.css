@@ -20,3 +20,10 @@
 .ProfilePage .scroll-btn{
   background-color:#4E4D5C;
 }
+
+.ProfilePage .message-user {
+  height: 70vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}

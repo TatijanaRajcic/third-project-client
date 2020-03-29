@@ -21,3 +21,11 @@
 .FavoritesPage .scroll-btn{
   background-color:#684756;
 }
+
+
+.FavoritesPage .message-user {
+  height: 70vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -64,11 +64,18 @@ export default class Favorites extends Component {
       <div>
         <MainLayout>
           <div className="FavoritesPage">
-            <h1>Here are your favorites, {user.username} !</h1>
-            <div className="all-exhibitions-container">
-              {exhibitionImages}
-            </div>
-            <button onClick={this.scrollToTop} className="scroll-btn">Up</button>
+            {exhibitionImages.length > 0 ? 
+            <React.Fragment>
+              <h1>Here are your favorites, {user.username} !</h1>
+              <div className="all-exhibitions-container">
+                {exhibitionImages}
+              </div>
+              <button onClick={this.scrollToTop} className="scroll-btn">Up</button>
+            </React.Fragment>
+            :
+            <h1 className="message-user">Hey {user.username}. You don't have any favorites for now. It's time to explore the gallery!</h1>
+            }
+
           </div>
         </MainLayout>
       </div>

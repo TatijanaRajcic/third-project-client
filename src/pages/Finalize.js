@@ -138,7 +138,7 @@ class Finalize extends Component {
       <div>
         <MainLayout>
           <div className="FinalizeExhibition">
-            <iframe className="FullScreen" src={this.state.exhibition.background_image}></iframe>
+            <iframe scrolling="no" className="FullScreen" src={this.state.exhibition.background_image}></iframe>
             <div className="ImagesContainer">
               {exhibitionImages}
             </div>

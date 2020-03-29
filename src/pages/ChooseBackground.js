@@ -9,7 +9,7 @@ export default class ChooseBackground extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      backgrounds: [4537166810054656,5223009199587328,93375,5698198140092416,120402,499450,657422,280349,5733748926578688,4630494771675136,5930532919574528,626640,4593526780198912,140446,5370793319989248]
+      backgrounds: ["9vSKSPBDiN9","1fahMeqZOw_","fGOz9oxU_1A","6mIwjCc-hXQ","9IThStnGHNm","c2cdFa9zgOb","28nBVxw_0Hb","9gwkGIvg0Bk","4fmhX_irV2e","78cu4uroDgM"]
     }
   }
 
@@ -20,7 +20,7 @@ export default class ChooseBackground extends Component {
         <>
           <BgItem 
             {...this.props} // the same as writing: history= {this.props.history}, match = {this.props.match}
-            embedUrl = {`https://www.svrf.com/embed/vr/${background}`}
+            embedUrl = {`https://poly.google.com/view/${background}/embed`}
           />
         </>
       )

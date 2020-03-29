@@ -38,3 +38,7 @@
 body {
   background-color:black
 }
+
+iframe {
+  overflow:hidden;
+}

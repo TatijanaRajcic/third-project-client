@@ -59,7 +59,7 @@ export default class PositionedImage extends Component {
             </>
           }
           <div className="oneExhibitionImage">
-            <img src={this.props.src} alt=""/>
+            <img src={this.props.src} alt="photo from the exhibition"/>
           </div>
         </div>
       </Draggable>

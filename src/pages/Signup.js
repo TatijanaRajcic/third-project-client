@@ -70,7 +70,7 @@ class Signup extends Component {
             </form>
           </div>
           <div>
-            <iframe className= "signup-iframe" src="https://poly.google.com/view/3mHT-lSmFvK/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
+            <iframe scrolling="no" className= "signup-iframe" src="https://poly.google.com/view/3mHT-lSmFvK/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
           </div>
         </div>
       </MainLayout>

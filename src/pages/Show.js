@@ -66,7 +66,7 @@ class Show extends Component {
       <div>
         <MainLayout>
           <div className="ExhibitionContainer" id="canvas">
-            <iframe className="FullScreen" src={this.state.exhibition.background_image}></iframe>
+            <iframe scrolling="no" className="FullScreen" src={this.state.exhibition.background_image}></iframe>
             <div className="ImagesContainer">
               {exhibitionImages}
             </div>

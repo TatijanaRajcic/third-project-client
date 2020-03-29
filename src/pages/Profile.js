@@ -93,11 +93,17 @@ export default class Profile extends Component {
       <div>
         <MainLayout>
           <div className="ProfilePage">
-            <h1>Here are your exhibitions, {user.username} !</h1>
-            <div className="all-exhibitions-container">
-              {exhibitionImages}
-            </div>
-            <button onClick={this.scrollToTop} className="scroll-btn">Up</button>
+            {exhibitionImages.length > 0 ? (
+              <React.Fragment>
+                <h1>Here are your exhibitions, {user.username} !</h1>
+                <div className="all-exhibitions-container">
+                  {exhibitionImages}
+                </div>
+                <button onClick={this.scrollToTop} className="scroll-btn">Up</button>
+              </React.Fragment>
+            ) : (
+              <h1 className="message-user">You don't have any exhibition yet, {user.username}. Feel free to create one.</h1>
+            )}
           </div>
         </MainLayout>
       </div>

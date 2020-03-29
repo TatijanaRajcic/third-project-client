@@ -45,7 +45,19 @@ export default class BgItem extends Component {
     return (
       <div className="BgItem">
         <LazyLoad>
-          <iframe sandbox="allow-scripts" style={{display: this.state.loaded ? "block": "none"}} onLoad={this.loadHandler} src={this.props.embedUrl} allowFullScreen/>
+          <iframe 
+            height="250px" 
+            scrolling="no" 
+            style={{display: this.state.loaded ? "block": "none"}} 
+            onLoad={this.loadHandler}
+            src={this.props.embedUrl} 
+            frameborder="0" 
+            allowvr="yes" 
+            allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" 
+            allowfullscreen mozallowfullscreen="true" 
+            webkitallowfullscreen="true" 
+            onmousewheel="">
+          </iframe>        
         </LazyLoad> 
         <button className="bg-btn" onClick={this.chooseBackground}>select</button>
       </div>

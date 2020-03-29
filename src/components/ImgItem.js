@@ -35,6 +35,7 @@ export default class ImgItem extends Component {
   componentDidMount() {
     axiosModule.get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.props.imageId}`)
       .then((response)=>{
+        debugger
         this.setState({image:response.data})
       })
       .catch((error)=>{
@@ -46,6 +47,7 @@ export default class ImgItem extends Component {
     if (this.props.imageId !== prevProps.imageId) {
       axiosModule.get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.props.imageId}`)
       .then((response)=>{
+        debugger
         this.setState({image:response.data})
       })
       .catch((error)=>{
