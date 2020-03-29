@@ -4,6 +4,7 @@
   height:95vh;
   color:white;
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center
 }
@@ -21,17 +22,24 @@
 .Login .login-content {
   width:75%;
   background-color:rgba(0, 0, 0, 0.7) ;
-  padding:2%
+  padding:2%;
+  margin:2%;
+}
+
+.Login .error-msg{
+  width:75%;
+  background-color:rgba(0, 0, 0, 0.7) ;
+  padding:2%;
 }
 
 @media (min-width:750px) {
-  .Login .login-content {
+  .Login .login-content, .Login .error-msg {
     width:50%;
   }
 }
 
 @media (min-width:1000px) {
-  .Login .login-content {
+  .Login .login-content, .Login .error-msg {
     width:20%;
   }
 }

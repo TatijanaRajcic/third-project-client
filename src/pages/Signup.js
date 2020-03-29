@@ -43,9 +43,7 @@ class Signup extends Component {
         this.props.history.push("/"); // to redirect
       })
       .catch((err)=> {
-        // debugger
         this.setState({error: err.response.data.message});
-        console.log(err.response.data.message)
       })
   }
 
@@ -69,6 +67,7 @@ class Signup extends Component {
               </div>
             </form>
           </div>
+          { this.state.error != null && <div className="error-msg">{this.state.error}</div> }
           <div>
             <iframe scrolling="no" className= "signup-iframe" src="https://poly.google.com/view/3mHT-lSmFvK/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
           </div>

@@ -68,6 +68,7 @@ class Login extends Component {
               </p>
             </form>
           </div>
+          { this.state.error != null && <div className="error-msg">{this.state.error}</div> }
           <div>
             <iframe scrolling="no" className= "login-iframe" src="https://poly.google.com/view/cV54p02NHQt/embed" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>        
           </div>
